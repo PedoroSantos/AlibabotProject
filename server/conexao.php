@@ -10,11 +10,8 @@ function conectar_banco(){
         $conexao = mysqli_connect($host, $usuario, $senha, $banco);
         return $conexao;
     } catch (Exception $e) {
-        return "erro: ". mysqli_connect_error();
+        die("erro: ". mysqli_connect_error());
     }
-}
-
-$conexao = conectar_banco();
-echo $conexao 
+} 
 
 ?>
