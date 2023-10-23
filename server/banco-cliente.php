@@ -1,36 +1,54 @@
 <?php
-include("conexao.php")
+include("conexao.php");
 
-function inserir($conexao,$nome,$email,$idade){
-	$sql="insert into cliente(nome, email, idade) values('$nome','$email',$idade);";
+function inserir($conexao, $cargo, $nome, $email, $idade){
+	$sql="insert into $cargo(nome, email, idade) values('$nome','$email',$idade);";
 	return mysqli_query($conexao,$sql);
-}
+};
 
-function alterar($conexao,$idCliente,$nome,$email,$idade){
-	$sql = "update cliente set nome='$nome',email='$email',idade=$idade where idClientes=$idCliente";
+function alterar($conexao, $cargo, $idCliente, $nome, $email, $idade){
+	$id_cargo = selectCargo($cargo);
+
+	$sql = "update $cargo set nome='$nome',email='$email',idade=$idade where $id_cargo=$idCliente";
 	return mysqli_query($conexao,$sql);
-}
+};
 
-function excluir($conexao,$idCliente){
-	$sql = "delete from cliente where idClientes = $idCliente";
+function excluir($conexao, $cargo, $id){
+	$id_cargo = selectCargo($cargo);
+
+	$sql = "delete from $cargo where $id_cargo = $id";
+
 	return mysqli_query($conexao,$sql);
-}
+};
 
-function listarClientes($conexao){
+function listarClientes($conexao, $cargo){
 	$clientes = array();
-	$sql = "select * from cliente";
+	$sql = "select * from $cargo";
 	$resultado =  mysqli_query($conexao,$sql);
 	
 	while($cliente=mysqli_fetch_assoc($resultado)){
 		array_push($clientes,$cliente);
 	}
 	return $clientes;
-}
+};
 
+function selectCargo($cargo) {
+	if ($cargo == "cliente"){
+		$id_cargo = "idClientes";
+	}
+	else if ($cargo == "funcionário") {
+		$id_cargo = "idFuncionarios";
+	};
 
-function buscarCliente($conexao,$idCliente){
-	$sql = "select * from cliente where idClientes = $idCliente";
+	return $id_cargo;
+};
+
+function buscarIndividual($conexao, $cargo, $idCliente){
+	$id_cargo = selectCargo($cargo);
+
+	$sql = "select * from $cargo where $id_cargo = $idCliente";
+	
 	$resultado = mysqli_query($conexao,$sql);
 	return mysqli_fetch_assoc($resultado);
-}
+};
 ?>
