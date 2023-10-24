@@ -5,7 +5,7 @@ include ("banco-cliente.php");
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<title>Lista de Clientes</title>
+	<title>Lista de Usuario</title>
 	</head>
 	<body>
 		<h1>Clientes Cadastrados</h1>
