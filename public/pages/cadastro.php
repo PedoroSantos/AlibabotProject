@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+    include("../../server/cadastro_proc.php");
+?>
+
 <html>
 <head>
     <title>Cadasto</title>
@@ -25,7 +28,3 @@
 
 </body>
 </html>
-
-<?php
-    include("../../server/cadastro_proc.php");
-?>
