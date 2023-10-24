@@ -1,6 +1,15 @@
 <?php
 include("conexao.php");
 
+function selectCargo($cargo) {
+	if ($cargo == "usuario"){
+		$id_cargo = "idUsuarios";
+	}
+	else if ($cargo == "funcionario") {
+		$id_cargo = "idFuncionarios";
+	};
+	return $id_cargo;
+};
 function inserir($conexao, $cargo, $nome, $email, $idade){
 	$sql="insert into $cargo(nome, email, idade) values('$nome','$email',$idade);";
 	return mysqli_query($conexao,$sql);
@@ -18,7 +27,7 @@ function excluir($conexao, $cargo, $id){
 	return mysqli_query($conexao,$sql);
 };
 
-function listarUsuarios($conexao, $cargo){
+function listaBanco($conexao, $cargo){
 	$usuarios = array();
 	$sql = "select * from $cargo";
 	$resultado =  mysqli_query($conexao,$sql);
@@ -29,15 +38,6 @@ function listarUsuarios($conexao, $cargo){
 	return $usuarios;
 };
 
-function selectCargo($cargo) {
-	if ($cargo == "usuario"){
-		$id_cargo = "idUsuarios";
-	}
-	else if ($cargo == "funcionario") {
-		$id_cargo = "idFuncionarios";
-	};
-	return $id_cargo;
-};
 
 function buscarIndividual($conexao, $cargo, $idUsuario){
 	$id_cargo = selectCargo($cargo);
