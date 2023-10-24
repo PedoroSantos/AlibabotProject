@@ -21,10 +21,12 @@ include ("banco-cliente.php");
 				<td>Senha</td>
 				
 			</tr>
+			
 			<?php
-			$usuarios = listarClientes($conexao, "usuario");
+			$usuarios = listaBanco($conexao, "usuario");
 			foreach ($usuarios as $usuario):
 			?>
+
 			<tr>
 				<td><a href="alterar.php?idClientes=<?php echo $usuario['idUsuarios']?>">Alterar</td>
 				<td><a href="excluir.php?idClientes=<?php echo $usuario['idUsuarios']?>">Excluir</td>
