@@ -10,7 +10,7 @@ include ("banco-cliente.php");
 	<body>
 		<h1>Versões Registradas</h1>
 		<h2>Menus</h2>
-		<a href="atualizações.php">Adicionar nova Versão</a>
+		<a href="versões.php">Adicionar nova Versão</a>
 		<table>
 			<tr>
 				<td>Alterar</td>
