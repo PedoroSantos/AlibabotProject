@@ -23,7 +23,7 @@ include ("banco-cliente.php");
 			</tr>
 			
 			<?php
-			$usuarios = listaBanco($conexao, "usuario");
+			$usuarios = listaBanco($conexao, "Usuario");
 			foreach ($usuarios as $usuario):
 			?>
 
