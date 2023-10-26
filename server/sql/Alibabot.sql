@@ -24,11 +24,4 @@ versaoAPP char(6) not null,
 tamanhoAPP char(5) not null
 );
 
-create table Chamados(
-idChamado  int primary key not null auto_increment,
-perguntaChamado varchar(256) not null,
-respostaChamado varchar(256) not null,
-dataEmissao date not null
-);
-
 show tables;
