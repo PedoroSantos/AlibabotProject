@@ -1,14 +1,15 @@
 <?php
-include ("conexao.php");
-include ("banco-cliente.php");
+include ("../../server/conexao.php");
+include ("../../server/banco-dados.php");
 ?>
+
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<title>Lista de Clientes</title>
+	<title>Lista de Funcionários</title>
 	</head>
 	<body>
-		<h1>Clientes Cadastrados</h1>
+		<h1>Funcionários Cadastrados</h1>
 		<h2>Menus</h2>
 		<a href="cadastro.php">Novo cadastro</a>
 		<table>
@@ -22,12 +23,12 @@ include ("banco-cliente.php");
 				<td>Area</td>
 			</tr>
 			<?php
-			$funcionarios = listaBanco($conexao, "usuario");
+			$funcionarios = listaBanco($conexao, "Funcionarios");
 			foreach ($funcionarios as $funcionario):
 			?>
 			<tr>
-				<td><a href="alterar.php?idClientes=<?php echo $funcionario['idFuncionario']?>">Alterar</td>
-				<td><a href="excluir.php?idClientes=<?php echo $funcionario['idFuncionario']?>">Excluir</td>
+				<td><a href="alterar.php?idFuncionario=<?php echo $funcionario['idFuncionario']?>">Alterar</td>
+				<td><a href="excluir.php?idFuncionario=<?php echo $funcionario['idFuncionario']?>">Excluir</td>
 				<td><?php echo $funcionario['idFuncionario']?></td>
 				<td><?php echo $funcionario['nomeFuncionario']?></td>
 				<td><?php echo $funcionario['emailFuncionario']?></td>

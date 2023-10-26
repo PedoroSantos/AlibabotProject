@@ -1,17 +1,14 @@
 <?php //Conexao banco de dados
+$host = "localhost:3307";
+$usuario = "root";
+$senha = "senac";
+$banco = "Alibabot";
 
-function conectar_banco(){
-    $host = "";
-    $usuario = "";
-    $senha = "";
-    $banco = "";
-
-    try {
-        $conexao = mysqli_connect($host, $usuario, $senha, $banco);
-        return $conexao;
-    } catch (Exception $e) {
-        die("erro: ". mysqli_connect_error());
-    }
-} 
+try {
+    $conexao = mysqli_connect($host, $usuario, $senha, $banco);
+    return $conexao;
+} catch (Exception $e) {
+    die("erro: ". mysqli_connect_error());
+}
 
 ?>

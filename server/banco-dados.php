@@ -1,5 +1,4 @@
 <?php
-include("conexao.php");
 
 function selectCargo($cargo) {
 	if ($cargo == "usuario"){

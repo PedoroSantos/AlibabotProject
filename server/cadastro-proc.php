@@ -1,20 +1,20 @@
 <?php
 include("conexao.php");
 
-function cadastro(){
+function cadastro_funcionario($conexao){
     
     //dados do fomulario
     $nome = $_POST['nome'];
     $email= $_POST['email'];
     $senha = $_POST['senha'];
     $confirmar_senha = $_POST['confirmar_senha'];
+    $area = $_POST['area'];
 
     //verficar senha
     if ($senha != $confirmar_senha) {
         echo "As senhas não coincidem. Por favor, tente novamente.";
         die();
     }
-    $conexao = conectar_banco();
     //hash da senha(armazenar senha segura)
     $senha_hashed = password_hash($senha, PASSWORD_DEFAULT);
 

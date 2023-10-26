@@ -1,5 +1,5 @@
 <?php
-    include("../../server/cadastro_proc.php");
+    include("../../server/cadastro-proc.php");
 ?>
 
 <html>
@@ -8,9 +8,10 @@
 </head>
 
 <body>
-    <h1>Cadasto de Usuário</h1>
+    <h1>Cadastro de Usuários</h1>
     
-    <form action="cadastro.php" method="post">
+    <!-- ACTION NOT WORKING -->
+    <form action="cadastro_funcionario($conexao)" method="post">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required><br><br>
 
@@ -22,6 +23,9 @@
 
         <label for="confirmar_senha">Confirme a Senha:</label>
         <input type="password" id="confirmar_senha" name="confirmar_senha" required><br><br>
+
+        <label for="area">Qual sua área de atuação?</label>
+        <input id="area" name="area" required><br><br>
 
         <input type="submit" value="Cadastrar" name="submit">
     </form>
