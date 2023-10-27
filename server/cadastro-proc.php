@@ -18,10 +18,10 @@ if ($senha != $confirmar_senha) {
 
 if ($cargo == "Funcionarios") {
     $area = $_POST['area'];
-    $sql = "INSERT INTO usuarios (nome, email, senha, area) VALUES ('$nome', '$email', '$senha', '$area')";
+    $sql = "INSERT INTO $cargo (nome, email, senha, areaFuncionario) VALUES ('$nome', '$email', '$senha', '$area')";
 }
 else if ($cargo = "Usuarios") {    
-    $sql = "INSERT INTO usuarios (nome, email, senha, termosCondicoes) VALUES ('$nome', '$email', '$senha', true)";
+    $sql = "INSERT INTO $cargo (nome, email, senha, termosCondicoes) VALUES ('$nome', '$email', '$senha', true)";
 }
 
 
