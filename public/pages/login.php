@@ -1,31 +1,27 @@
-<?php
-
-include("conexao-alibabot.php");
-include("banco-usuario-alibabot.php");
-
-$idUsuario = $_GET["idUsuario"];
-$Usuario = buscarUsuario($conexao, $idUsuario);
-?>
-
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> Autenticar Usuario </title>
+        <title> Login Usuario </title>
     </head>
+    
     <body>
-    <h1> Autenticar Usuario </h1>
-    <form method="post" action="verifica-alteracao.php">
-        <input type="hidden" name="idUsuario" value="<?php echo $Usuario["idUsuario"] ?>"> <br>
-        Nome: <input type="text" name="nome" value="<?php echo $Usuario["nome"] ?>"> <br>
-        Email: <input type="text" name="email" value="<?php echo $Usuario["email"] ?>"> <br>
-        Senha: <input type="text" name="senha" value="<?php echo $Usuario["senha"] ?>"> <br>
+    <h1> Login Usuario </h1>
+    <form method="post" action="../../server/verificar-usuario.php">
+        <input type="hidden" name="cargo", name="Usuarios"> <br>
+        Email: <input type="text" name="email"> <br>
+        Senha: <input type="text" name="senha"> <br>
         <input type="submit" value="autenticar" name="Autenticar"> <br>
+    </form>
+    
+    <?php
+        if(isset($_GET["erro"])) {
+            echo "USUARIO NAO PODE SER AUTENTICADOS";
+        }
+    ?>
+
+    <br>
+    <a href="#"> Funcionário </a> <br>
+    <a href="cadastro-usuario.php"> Cadastre Aqui! </a>
+
     </body>
 </html>
-
-<?php
-
-$email= $_POST['email'];
-$senha= $_POST['senha'];
-
-?>
