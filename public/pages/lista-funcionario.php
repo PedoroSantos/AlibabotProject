@@ -11,7 +11,7 @@ include ("../../server/banco-dados.php");
 	<body>
 		<h1>Funcionários Cadastrados</h1>
 		<h2>Menus</h2>
-		<a href="cadastro.php">Novo cadastro</a>
+		<a href="cadastro-funcionarios.php">Novo cadastro</a>
 		<table>
 			<tr>
 				<td>Alterar</td>
@@ -19,7 +19,6 @@ include ("../../server/banco-dados.php");
 				<td>Id</td>
 				<td>Nome</td>
 				<td>Email</td>
-				<td>Senha</td>
 				<td>Area</td>
 			</tr>
 			<?php
@@ -30,9 +29,8 @@ include ("../../server/banco-dados.php");
 				<td><a href="alterar.php?idFuncionario=<?php echo $funcionario['idFuncionario']?>">Alterar</td>
 				<td><a href="excluir.php?idFuncionario=<?php echo $funcionario['idFuncionario']?>">Excluir</td>
 				<td><?php echo $funcionario['idFuncionario']?></td>
-				<td><?php echo $funcionario['nomeFuncionario']?></td>
-				<td><?php echo $funcionario['emailFuncionario']?></td>
-				<td><?php echo $funcionario['senhaFuncionario']?></td>
+				<td><?php echo $funcionario['nome']?></td>
+				<td><?php echo $funcionario['email']?></td>
 				<td><?php echo $funcionario['areaFuncionario']?></td>
 			</tr>
 			<?php 

@@ -1,38 +1,37 @@
 <?php
 include("conexao.php");
 
-function cadastro_funcionario($conexao){
-    
-    //dados do fomulario
-    $nome = $_POST['nome'];
-    $email= $_POST['email'];
-    $senha = $_POST['senha'];
-    $confirmar_senha = $_POST['confirmar_senha'];
+//dados do fomulario
+$nome = $_POST['nome'];
+$email= $_POST['email'];
+$senha = $_POST['senha'];
+$confirmar_senha = $_POST['confirmar_senha'];
+$cargo = $_POST["cargo"];
+
+
+//verficar senha
+if ($senha != $confirmar_senha) {
+    echo "As senhas não coincidem. Por favor, tente novamente.";
+    header("Location:../public/pages/cadastro-$cargo.php?erro=senhas");
+    die();
+}
+
+if ($cargo == "Funcionarios") {
     $area = $_POST['area'];
+    $sql = "INSERT INTO $cargo (nome, email, senha, areaFuncionario) VALUES ('$nome', '$email', '$senha', '$area')";
+}
+else if ($cargo = "Usuarios") {    
+    $sql = "INSERT INTO $cargo (nome, email, senha, termosCondicoes) VALUES ('$nome', '$email', '$senha', true)";
+}
 
-    //verficar senha
-    if ($senha != $confirmar_senha) {
-        echo "As senhas não coincidem. Por favor, tente novamente.";
-        die();
-    }
-    //hash da senha(armazenar senha segura)
-    $senha_hashed = password_hash($senha, PASSWORD_DEFAULT);
 
-    //Inserir dados no bando de dados
-    $sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha_hashed')";
+if (mysqli_query($conexao, $sql)) {
+    header("Location:../public/pages/login.php");
+} else {
+    header("Location:../public/pages/cadastro.php");
+}
 
-    if (mysqli_query($conexao, $sql)) {
-        echo "Cadastro realizado com sucesso!";
-    } else {
-        echo "Erro no cadastro: " . mysqli_error($conexao);
-    }
-    
-    //fechar conexao com B.D
-    mysqli_close($conexao);
-};
-
-if(isset($_POST['submit'])) {
-    cadastro();
-};
+//fechar conexao com B.D
+mysqli_close($conexao);
 
 ?>
