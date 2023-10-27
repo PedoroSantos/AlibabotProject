@@ -15,7 +15,7 @@
     
     <?php
         if(isset($_GET["erro"])) {
-            echo "USUARIO NAO PODE SER AUTENTICADOS";
+            echo '<p class="erro"> Combinação Usuario/Senha não encontrada.</p>';
         }
     ?>
 
