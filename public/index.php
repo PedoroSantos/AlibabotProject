@@ -105,10 +105,12 @@
     <h2 class="sec-header text-light text-left m-0 mx-5 mb-5">COMO <span>USAR?</span></h2>
     <br>
     <div class="video container-fluid d-flex justify-content-center align-items-center">
-      <iframe width="1280" height="720" class=" m-auto" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+      <iframe class=" m-auto" src="https://www.youtube.com/embed/tgbNymZ7vqY">
       </iframe>
     </div>
+
   </section>
+
   <section id="contact">
     <div class="contact-header"></div>
     <div class="contact-text"></div>
