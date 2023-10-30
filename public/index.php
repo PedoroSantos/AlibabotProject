@@ -20,7 +20,7 @@
   <!--Lib de icons-->
   <script src="https://kit.fontawesome.com/23139fef71.js" crossorigin="anonymous"></script>
   <!--Estilos-->
-  <link rel="stylesheet" href="./sources/styles/index.scss">
+  <link rel="stylesheet" href="./sources/styles/index.css">
 
 </head>
 
@@ -28,17 +28,17 @@
   <header>
     <nav class="navbar navbar-expand-lg position-fixed w-100 text-light">
       <div class="container-fluid text-light ">
-        <a class="navbar-brand fw-bold text-light d-flex align-items-center justify-content-center" href="#"><img src="./sources/img/alibabot_logo.svg" alt="logo" width="50px" class="mx-2">Alibabot</a>
+        <a class="navbar-brand fw-bolder text-light d-flex align-items-center justify-content-center" href="#"><img src="./sources/img/alibabot_logo.svg" alt="logo" width="38px" class="mx-2">Alibabot</a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse  " id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-light fw-lighter enter-btn" aria-current="page" href="#">Entrar</a>
             </li>
             <li class="nav-item download">
-              <a class="nav-link" href="#">Download</a>
+              <a class="nav-link fw-bolder" href="#">Download</a>
             </li>
           </ul>
         </div>
@@ -46,41 +46,68 @@
     </nav>
   </header>
   <section id="hero" class="d-flex flex-row justify-content-center align-items-center w-100  ">
-  <div class=" h-content d-flex flex-row justify-content-center align-items-center w-75">
-    <div class="h-text d-flex flex-column text-center justify-content-center align-items-center text-light mx-4">
-      <h1 class="fw-bolder">Alibabot</h1>
-      <p class="fw-medium fs-5">O seu gênio da informática. Com ele, você pode acessar eaproveitar o seu computador com facilidade se segurança!Experimente já!</p>
-      <button class="btn-download rounded-5 p-1 px-4 fs-5">Baixe Agora</button>
+    <div class=" h-content d-flex flex-row justify-content-center align-items-center w-75">
+      <div class="h-text d-flex flex-column text-center justify-content-center align-items-center text-light mx-4">
+        <h1 class="fw-bolder">Alibabot</h1>
+        <p class="fw-medium fs-5">O seu gênio da informática. Com ele, você pode acessar e aproveitar o seu computador com facilidade e segurança.
+          Experimente já!</p>
+        <button class="btn-download rounded-5 p-1 px-4 py-2 fs-5">Baixe Agora</button>
+      </div>
+      <div class="h-image container-fluid">
+        <img src="./sources/img/alibabot_robot.svg" alt="">
+      </div>
     </div>
-    <div class="h-image container-fluid">
-      <img src="./sources/img/alibabot_robot.svg" alt="">
-    </div>
-  </div>
 
   </section>
-  <section id="about" class="d-flex container flex-row">
 
-    <div class="items">
-      <div class="row">
-        <div class="col">
-          <div class="about-header"></div>
-          <div class="about-header"></div>
-        </div>
-        <div class="col">
-          <div class="about-header"></div>
-          <div class="about-header"></div>
-        </div>
-        <div class="col">
-          <div class="about-header"></div>
-          <div class="about-header"></div>
+  <section id="about" class="d-flex flex-column about">
+    <h2 class="sec-header text-light text-center mt-5">QUEM <span>SOMOS</span></h2>
+    <div class="content h-50 d-flex justify-content-center align-items-center flex-column">
+
+      <div class="items container mt-5">
+        <div class="row text-center">
+          <div class="item-col col text-light">
+            <div class="about-header"><i class="fas fa-scroll fs-1 my-4"></i>
+              <h2 class="fs-3">HISTÓRIA</h2>
+            </div>
+            <hr>
+            <div class="about-text fw-normal fs-5">
+              <p>
+                A ideia começou como um projeto profissional, juntando
+                amigos para criar algo <strong>novo</strong>.
+              </p>
+            </div>
+          </div>
+          <div class="item-col col text-light">
+            <div class="about-header"><i class="fas fa-users fs-1 my-4"></i>
+              <h2 class="fs-3">EQUIPE</h2>
+            </div>
+            <hr>
+            <div class="about-text fw-normal fs-5">
+              <p>Somos um grupo de nove pessoas. Alunos de <strong>TI</strong> na instituição de ensino Senac.</p>
+            </div>
+          </div>
+          <div class="item-col col text-light">
+            <div class="about-header"><i class="fas fa-bullseye fs-1 my-4"></i>
+              <h2 class="fs-3">OBJETIVO</h2>
+            </div>
+            <hr>
+            <div class="about-text fw-normal fs-5">
+              <p>Temos como principal meta, incrementar o campo da <strong>educação</strong> e das <strong>IA’S</strong>.</p>
+            </div>
+          </div v>
         </div>
       </div>
     </div>
   </section>
   <section id="htuse">
-    <h1></h1>
+
+    <h2 class="sec-header text-light text-left m-0 mx-5 mb-5">COMO <span>USAR?</span></h2>
     <br>
-    <div class="video"></div>
+    <div class="video container-fluid d-flex justify-content-center align-items-center">
+      <iframe width="1280" height="720" class=" m-auto" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+      </iframe>
+    </div>
   </section>
   <section id="contact">
     <div class="contact-header"></div>
