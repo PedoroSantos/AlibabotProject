@@ -1,16 +1,14 @@
-<?php
-    include("../../server/cadastro_proc.php");
-?>
-
 <html>
 <head>
     <title>Cadasto</title>
 </head>
 
 <body>
-    <h1>Cadasto de Usuário</h1>
+    <h1>Cadastro de Funcionários</h1>
     
-    <form action="cadastro.php" method="post">
+    <form action="../../server/cadastro-proc.php" method="post">
+        <input type="hidden" name="cargo", value="Funcionarios">
+
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required><br><br>
 
@@ -23,8 +21,17 @@
         <label for="confirmar_senha">Confirme a Senha:</label>
         <input type="password" id="confirmar_senha" name="confirmar_senha" required><br><br>
 
+        <label for="area">Qual sua área de atuação?</label>
+        <input id="area" name="area" required><br><br>
+
         <input type="submit" value="Cadastrar" name="submit">
     </form>
+
+    <?php
+        if(isset($_GET["erro"]) && $_GET["erro"] == "senhas") {
+            echo '<p class="erro"> As senhas nao coincidem. <p>';
+        }
+    ?>
 
 </body>
 </html>

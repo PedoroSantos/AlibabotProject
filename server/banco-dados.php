@@ -1,5 +1,4 @@
 <?php
-include("conexao.php");
 
 function selectCargo($cargo) {
 	if ($cargo == "usuario"){
@@ -45,4 +44,10 @@ function buscarIndividual($conexao, $cargo, $idUsuario){
 	$resultado = mysqli_query($conexao,$sql);
 	return mysqli_fetch_assoc($resultado);
 };
+
+function verificarAcesso($conexao, $cargo, $email, $senha){
+	$sql = "select * from $cargo where email= '$email' and senha= '$senha';";
+	$resultado = mysqli_query($conexao, $sql);
+	return mysqli_fetch_assoc($resultado);
+}
 ?>
