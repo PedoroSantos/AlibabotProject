@@ -11,6 +11,9 @@
 </html>
 
 <?php
-
+$versoes = ['0.1','0.2'];
+for ($i = 0;$i <= sizeof($versoes) - 1; $i++){
+    echo "<div><h3>Versão $versoes[$i] </h3> <button>Baixar</button></div>";
+};
 
 ?>

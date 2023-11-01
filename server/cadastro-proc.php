@@ -11,7 +11,7 @@ $cargo = $_POST["cargo"];
 
 //verficar senha
 if ($senha != $confirmar_senha) {
-    echo "As senhas não coincidem. Por favor, tente novamente.";
+    echo '<p class="confirmar_senha" As senhas não coincidem. Por favor, tente novamente.</p>';
     header("Location:../public/pages/cadastro-$cargo.php?erro=senhas");
     die();
 }
