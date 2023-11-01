@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
+  <!-- Libs -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!--Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
@@ -61,8 +63,10 @@
   </section>
 
   <section id="about" class="d-flex flex-column about">
-    <h2 class="sec-header text-light text-center mt-5">QUEM <span>SOMOS</span></h2>
-    <div class="content h-50 d-flex justify-content-center align-items-center flex-column">
+    <h2 class="sec-header text-light text-center mt-5" data-aos="fade-up"
+     data-aos-duration="600">QUEM <span>SOMOS</span></h2>
+    <div class="content h-50 d-flex justify-content-center align-items-center flex-column"  data-aos="fade-up"
+     data-aos-duration="450">
 
       <div class="items container mt-5">
         <div class="row text-center">
@@ -102,7 +106,7 @@
   </section>
   <section id="htuse">
 
-    <h2 class="sec-header text-light text-left m-0 mx-5 mb-5">COMO <span>USAR?</span></h2>
+    <h2 class="sec-header text-light  m-0 mx-5 mb-5" data-aos="fade-right" data-aos-duration="900">COMO <span class="mx-3">USAR?</span></h2>
     <br>
     <div class="video container-fluid d-flex justify-content-center align-items-center">
       <iframe class=" m-auto" src="https://www.youtube.com/embed/tgbNymZ7vqY">
@@ -112,13 +116,58 @@
   </section>
 
   <section id="contact">
-    <div class="contact-header"></div>
-    <div class="contact-text"></div>
-    <footer>
-      <p></p>
-    </footer>
-  </section>
+    <div class="contact-header text-light d-flex justify-content-center"  data-aos="zoom-in"><h2 class="fw-bold ">Alguma dúvida <span id="interrogations">???</span></h2></div>
+    <hr>
+      <div class="contact-text d-flex justify-content-center aligm-items-center fs-2 text-light w-100 "  data-aos="zoom-in">
+        <p class="contact-p ">
+          Entre em contato com o <span>suporte</span> e iremos <span>resolver suas dúvidas!</span>
+        </p>
+        
 
+        <p class="contact-info">
+        <i class="fas fa-phone"></i>11 99665-7501<br>
+        <i class="fas fa-envelope"></i>Alibabot@support.com
+        </p>
+      </div>
+
+  </section>
+  <footer>
+        <p class="text-light text-center ">@2023 Alibabas BRA, inc. All rights reserved.</p>
+  </footer>
+  <script>
+    AOS.init();
+     
+    var cards = document.getElementsByClassName("col");
+
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].addEventListener("mouseenter", startTilt);
+      cards[i].addEventListener("mousemove", tilt);
+      cards[i].addEventListener("mouseleave", stopTilt);
+    }
+
+    function startTilt(event) {
+      this.isTilting = true;
+      tilt.call(this, event);
+    }
+
+    function tilt(event) {
+      if (!this.isTilting) return;
+
+      var maxTilt = 7;
+      var rect = this.getBoundingClientRect();
+      var mouseX = event.clientX - rect.left;
+      var mouseY = event.clientY - rect.top;
+      var tiltX = (mouseX - rect.width / 2) / (rect.width / 2) * maxTilt;
+      var tiltY = (mouseY - rect.height / 2) / (rect.height / 2) * maxTilt;
+
+      this.style.transform = "perspective(1400px) rotateX(" + -tiltY + "deg) rotateY(" + tiltX + "deg)";
+    }
+
+    function stopTilt() {
+      this.isTilting = false;
+      this.style.transform = "perspective(1400px) rotateX(0) rotateY(0)";
+    }
+  </script>
 </body>
 
 </html>
