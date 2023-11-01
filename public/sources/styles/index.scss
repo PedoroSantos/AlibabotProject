@@ -5,6 +5,7 @@ body {
 .navbar {
   background-color: #272c33;
   z-index: 999;
+  transition: .5s;
 }
 .navbar-brand {
   letter-spacing: 1.7px;

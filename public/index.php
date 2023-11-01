@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Alibabot</title>
   <!-- Libs -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -63,10 +63,8 @@
   </section>
 
   <section id="about" class="d-flex flex-column about">
-    <h2 class="sec-header text-light text-center mt-5" data-aos="fade-up"
-     data-aos-duration="600">QUEM <span>SOMOS</span></h2>
-    <div class="content h-50 d-flex justify-content-center align-items-center flex-column"  data-aos="fade-up"
-     data-aos-duration="450">
+    <h2 class="sec-header text-light text-center mt-5" data-aos="fade-up" data-aos-duration="600">QUEM <span>SOMOS</span></h2>
+    <div class="content h-50 d-flex justify-content-center align-items-center flex-column" data-aos="fade-up" data-aos-duration="450">
 
       <div class="items container mt-5">
         <div class="row text-center">
@@ -116,27 +114,40 @@
   </section>
 
   <section id="contact">
-    <div class="contact-header text-light d-flex justify-content-center"  data-aos="zoom-in"><h2 class="fw-bold ">Alguma dúvida <span id="interrogations">???</span></h2></div>
+    <div class="contact-header text-light d-flex justify-content-center" data-aos="zoom-in">
+      <h2 class="fw-bold ">Alguma dúvida <span id="interrogations">???</span></h2>
+    </div>
     <hr>
-      <div class="contact-text d-flex justify-content-center aligm-items-center fs-2 text-light w-100 "  data-aos="zoom-in">
-        <p class="contact-p ">
-          Entre em contato com o <span>suporte</span> e iremos <span>resolver suas dúvidas!</span>
-        </p>
-        
+    <div class="contact-text d-flex justify-content-center aligm-items-center fs-2 text-light w-100 " data-aos="zoom-in">
+      <p class="contact-p ">
+        Entre em contato com o <span>suporte</span> e iremos <span>resolver suas dúvidas!</span>
+      </p>
 
-        <p class="contact-info">
+
+      <p class="contact-info">
         <i class="fas fa-phone"></i>11 99665-7501<br>
         <i class="fas fa-envelope"></i>Alibabot@support.com
-        </p>
-      </div>
+      </p>
+    </div>
 
   </section>
   <footer>
-        <p class="text-light text-center ">@2023 Alibabas BRA, inc. All rights reserved.</p>
+    <p class="text-light text-center ">@2023 Alibabas BRA, inc. All rights reserved.</p>
   </footer>
   <script>
     AOS.init();
-     
+
+
+
+    window.addEventListener("scroll", () => {
+      var y = window.scrollY;
+      if (y >= 400) {
+        document.querySelector('.navbar').classList.add('shadow-lg');
+      } else {
+        document.querySelector('.navbar').classList.remove('shadow-lg');
+      }
+    });
+
     var cards = document.getElementsByClassName("col");
 
     for (var i = 0; i < cards.length; i++) {

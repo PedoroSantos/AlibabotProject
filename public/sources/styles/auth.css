@@ -1,0 +1,15 @@
+.login-content {
+  background-color: #333;
+  padding: 4em;
+  border-radius: 20px;
+}
+.login-form input {
+  margin: 1em 0;
+}
+.login-form label {
+  align-self: flex-start;
+}
+.login-form h1 {
+  margin-bottom: 1em;
+  font-weight: 700;
+}/*# sourceMappingURL=auth.css.map */
