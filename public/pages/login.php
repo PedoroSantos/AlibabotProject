@@ -28,10 +28,11 @@
 <body>
     <section id="login" class="d-flex justify-content-center align-items-center flex-column h-100">
 
-        <div class="login-content d-flex justify-content-center align-items-center flex-column">
+        <div class="login-content d-flex justify-content-center align-items-center flex-column text-white">
             
             <form method="post" action="../../server/verificar-usuario.php" class="login-form d-flex justify-content-center align-items-center flex-column">
                 <input type="hidden" name="cargo" , name="Usuarios">
+                <i class="fas fa-user"></i>
                 <h1> LOGIN </h1>
                 <label>Email</label>
                 <input type="text" name="email">

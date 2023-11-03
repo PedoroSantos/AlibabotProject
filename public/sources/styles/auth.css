@@ -1,15 +1,41 @@
+body {
+  background: #0d0e11;
+}
+
 .login-content {
-  background-color: #333;
+  background: linear-gradient(139deg, #0d0e11 0%, hsl(214, 66%, 30%) 100%);
+  box-shadow: 0px 0px 33px -3px #000000;
+  border: 1px rgba(110, 162, 211, 0.6) solid;
   padding: 4em;
   border-radius: 20px;
 }
+
+.login-form .fa-user {
+  border-radius: 10px white solid;
+  font-size: 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.login-form .fa-user::after {
+  content: "";
+  border-radius: 100%;
+  border: 2px solid white;
+  position: absolute;
+  width: 1.7em;
+  height: 1.7em;
+  transform: translateY(-14px) translateX(-51px);
+}
 .login-form input {
   margin: 1em 0;
+  background: none;
+  border: none;
+  width: 100%;
+  border-bottom: 2px solid #71a5d8;
 }
 .login-form label {
   align-self: flex-start;
 }
 .login-form h1 {
   margin-bottom: 1em;
-  font-weight: 700;
+  font-weight: 500;
 }/*# sourceMappingURL=auth.css.map */
