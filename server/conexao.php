@@ -1,7 +1,7 @@
 <?php //Conexao banco de dados
-$host = "localhost:3307";
+$host = "localhost:3306";
 $usuario = "root";
-$senha = "senac";
+$senha = "";
 $banco = "Alibabot";
 
 try {

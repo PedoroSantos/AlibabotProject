@@ -29,26 +29,30 @@
     <section id="login" class="d-flex justify-content-center align-items-center flex-column h-100">
 
         <div class="login-content d-flex justify-content-center align-items-center flex-column text-white">
-            
+
             <form method="post" action="../../server/verificar-usuario.php" class="login-form d-flex justify-content-center align-items-center flex-column">
                 <input type="hidden" name="cargo" , name="Usuarios">
                 <i class="fas fa-user"></i>
                 <h1> LOGIN </h1>
-                <label>Email</label>
-                <input type="text" name="email">
-                <label>Senha</label>
-                <input type="text" name="senha">
-                <input type="submit" value="autenticar" name="Autenticar">
+                <div class="email-content">
+                    <i class="icon fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Insira seu e-mail" required>
+                </div>
+                <div class="password-content">
+                    <i class="icon fas fa-lock"></i>
+                    <input type="password" name="senha" placeholder="Insira sua senha" required>
+                </div>
+                <input type="submit" value="Entrar" name="Autenticar">
             </form>
         </div>
-        <div class="links">
-            <a href="cadastro-usuario.php"> Ainda não é membro?</a>
-            <a href="#">É um funcionário?</a><br>
+        <div class="links mt-2 text-light d-flex flex-column align-content-center justify-content-center text-center">
+            <a href="cadastro-usuarios.php"> Ainda não é membro?</a>
+            <a href="#">É um funcionário?</a>
         </div>
     </section>
 
     <?php
-    var_dump($_COOKIE["login_info"]);
+    //var_dump($_COOKIE["login_info"]);
     if (isset($_COOKIE["email"]) || isset($_COOKIE["email"])) {
     ?>
 
@@ -68,7 +72,7 @@
     }
     ?>
 
-    <br>
+ 
 
 
 </body>
