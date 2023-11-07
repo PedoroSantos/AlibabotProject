@@ -68,7 +68,7 @@
     }
 
     if (isset($_GET["erro"])) {
-        echo '<p class="erro"> Combinação Usuario/Senha não encontrada. </p>';
+        echo '<p class="erro">Usuário não encontrado!</p>';
     }
     ?>
 

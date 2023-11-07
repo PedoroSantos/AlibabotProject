@@ -14,7 +14,7 @@ if(verificarAcesso($conexao, $cargo, $email, $senha)){
         "senha" => $senha
     );
     setcookie("login_info", json_encode($login_info));
-    header("Location:../public/index.php");
+    header("Location:../public/pages/download.php");
 } else {
     header("Location:../public/pages/login.php?erro=true");
 }

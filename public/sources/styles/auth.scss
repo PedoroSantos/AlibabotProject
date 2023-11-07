@@ -1,12 +1,8 @@
+@import url('main.scss');
 body {
   background: #0d0e11;
+}
 
-}
-p{
-  color: white;
-  position: absolute;
-  width: 100px;
-}
 //#region Register
 .cadastro-content {
   background: linear-gradient(139deg, #0d0e11 0%, hsl(214, 66%, 30%) 100%);

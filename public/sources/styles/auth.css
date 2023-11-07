@@ -1,11 +1,6 @@
+@import url("main.scss");
 body {
   background: #0d0e11;
-}
-
-p {
-  color: white;
-  position: absolute;
-  width: 100px;
 }
 
 .cadastro-content {
