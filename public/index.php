@@ -37,7 +37,13 @@
         <div class="collapse navbar-collapse  " id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-light fw-lighter enter-btn" aria-current="page" href="./pages/login.php?download=true">Entrar</a>
+              <a class="nav-link text-light fw-lighter enter-btn" aria-current="page" href=<?php
+              if (!isset($_COOKIE['profile_info'])){
+                echo "./pages/profile.php";
+              } else {
+                echo "./pages/login.php?download=true";
+              }
+              ?>>Entrar</a>
             </li>
             <li class="nav-item download">
               <a class="nav-link fw-bolder" href="#">Download</a>

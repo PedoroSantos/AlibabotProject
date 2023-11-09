@@ -13,8 +13,8 @@ if(verificarAcesso($conexao, $cargo, $email, $senha)){
         "email" => $email,
         "senha" => $senha
     );
-    setcookie("login_info", json_encode($login_info));
-    header("Location:../public/pages/download.php");
+    setcookie("login_info", json_encode($login_info), 0, "/");
+    header("Location:../public/pages/profile.php");
 } else {
     header("Location:../public/pages/login.php?erro=true");
 }

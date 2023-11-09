@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil | Alibabot</title>
 </head>
 <body>
-    
+    <?php
+        $obj = json_decode($_COOKIE['login_info']);
+        echo $obj->email;
+        
+    ?>
 </body>
 </html>
