@@ -1,5 +1,6 @@
 <?php
-    include("../../server/cadastro_proc.php");
+    include("../../../server/cadastro_proc.php");
+	include ("../../../server/check-admin.php");
 ?>
 
 <html>

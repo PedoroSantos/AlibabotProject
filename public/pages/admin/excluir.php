@@ -1,5 +1,6 @@
 <?php 
-    include("../../server/excluir-cliente-proc.php");
+    include("../../../server/excluir-cliente-proc.php");
+    include ("../../../server/check-admin.php");
 ?>
 
 <html>
