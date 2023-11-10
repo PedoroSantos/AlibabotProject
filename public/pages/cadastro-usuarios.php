@@ -52,7 +52,7 @@
     </div>
     <div class="links mt-2 text-light d-flex flex-column align-content-center justify-content-center text-center">
         <a href="login.php"> Já é membro?</a>
-        <a href="#">É um funcionário?</a><br>
+
     </div>
 </section>
 
@@ -60,6 +60,9 @@
 <?php
 if (isset($_GET["erro"]) && $_GET["erro"] == "senhas") {
     echo '<p class="erro"> As senhas nao coincidem.<p>';
+}
+if (isset($_GET["erro"]) && $_GET["erro"] == "email") {
+    echo '<p class="erro"> Esse e-mail já está registrado, tente outro!<p>';
 }
 
 ?>

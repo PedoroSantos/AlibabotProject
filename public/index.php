@@ -38,7 +38,7 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link text-light fw-lighter enter-btn" aria-current="page" href=<?php
-              if (!isset($_COOKIE['profile_info'])){
+              if (isset($_COOKIE['login_info'])){
                 echo "./pages/profile.php";
               } else {
                 echo "./pages/login.php?download=true";

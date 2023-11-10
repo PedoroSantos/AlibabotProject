@@ -50,4 +50,14 @@ function verificarAcesso($conexao, $cargo, $email, $senha){
 	$resultado = mysqli_query($conexao, $sql);
 	return mysqli_fetch_assoc($resultado);
 }
+function verificaremail($conexao, $email){
+	$sql = "select count(email) from Usuarios where email='$email';";
+	$resultado = mysqli_query($conexao, $sql);
+	$row = mysqli_fetch_array($resultado,MYSQLI_NUM);
+	return $row[0];
+}
+function buscarnome($conexao,$email){
+	$sql = "select nome from Usuarios where email='$email';";
+	$resultado = mysqli_query($conexao, $sql);
+}
 ?>

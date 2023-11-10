@@ -47,7 +47,6 @@
         </div>
         <div class="links mt-2 text-light d-flex flex-column align-content-center justify-content-center text-center">
             <a href="cadastro-usuarios.php"> Ainda não é membro?</a>
-            <a href="#">É um funcionário?</a>
         </div>
     </section>
 

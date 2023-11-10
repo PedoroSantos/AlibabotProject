@@ -6,10 +6,13 @@
     <title>Perfil | Alibabot</title>
 </head>
 <body>
-    <?php
+    <section id="profile">
+        <h1>    <?php
         $obj = json_decode($_COOKIE['login_info']);
         echo $obj->email;
         
-    ?>
+    ?></h1>
+    </section>
+
 </body>
 </html>
