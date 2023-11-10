@@ -45,10 +45,23 @@ function buscarIndividual($conexao, $cargo, $idUsuario){
 	return mysqli_fetch_assoc($resultado);
 };
 
-function verificarAcesso($conexao, $cargo, $email, $senha){
-	$sql = "select * from $cargo where email= '$email' and senha= '$senha';";
-	$resultado = mysqli_query($conexao, $sql);
-	return mysqli_fetch_assoc($resultado);
+function verificarAcesso($conexao, $email, $senha){
+	try {
+		$sql = "select * from usuarios where email= '$email' and senha= '$senha';";
+		$resultado = mysqli_query($conexao, $sql);
+		return mysqli_fetch_assoc($resultado);
+	}
+	catch {
+		$sql = "select * from funcionarios where email= '$email' and senha= '$senha';";
+		$resultado = mysqli_query($conexao, $sql);
+		$resultado = mysqli_fetch_assoc($resultado);
+		// DON'T KNOW IF THIS WORKS, GOTTA TEST IT LATER
+		$cargo = "funcionario"
+		$nome = $resultado["nome"]
+		$email = $resultado["email"]
+		$senha = $resultado["senha"]
+		return $cargo, $nome, $email, $senha
+	}
 }
 function verificaremail($conexao, $email){
 	$sql = "select count(email) from Usuarios where email='$email';";
