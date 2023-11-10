@@ -7,12 +7,14 @@
 </head>
 <body>
     <section id="profile">
-        <h1>    <?php
-        $obj = json_decode($_COOKIE['login_info']);
-        echo $obj->email;
-        
-    ?></h1>
+    <?php
+        $array = json_decode($_COOKIE['login_info'], true);
+        $nome = $array['nome'];
+        $email = $array['email'];
+        var_dump($array);
+        echo "<h2>$nome</h2>";
+        echo "<h2>$email</h2>";
+    ?>
     </section>
-
 </body>
 </html>
