@@ -4,18 +4,15 @@ include("banco-dados.php");
 
 $email = $_POST["email"];
 $senha = $_POST["senha"];
-$nome = buscarnome($conexao,$email);
-$cargo = "Usuarios";
 
 setcookie("login_info", "", time() - 3600); 
-if(verificarAcesso($conexao, $cargo, $email, $senha, $nome)){
+if(verificarAcesso($conexao, $email, $senha)){
     $login_info = array(
         "cargo" => $cargo,
         "email" => $email,
         "nome" => $nome,
         "senha" => $senha
     );
-    echo "<Script"
     setcookie("login_info", json_encode($login_info), 0, "/");
 
     header("Location:../public/pages/profile.php");
