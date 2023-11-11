@@ -59,7 +59,7 @@
 
 
 <?php
-if (isset($_GET["erro"]) && $_GET["erro"] == "senhas") {
+if (isset($_GET["erro"]) && $_GET["erro"] == "senha") {
     echo '<p class="erro"> As senhas nao coincidem.<p>';
 }
 if (isset($_GET["erro"]) && $_GET["erro"] == "email") {
