@@ -31,7 +31,6 @@
         <div class="login-content d-flex justify-content-center align-items-center flex-column text-white">
 
             <form method="post" action="../../server/verificar-usuario.php" class="login-form d-flex justify-content-center align-items-center flex-column">
-                <input type="hidden" name="cargo" , name="Usuarios">
                 <i class="fas fa-user"></i>
                 <h1> LOGIN </h1>
                 <div class="email-content">
@@ -56,13 +55,13 @@
     ?>
 
         <!-- formulario pra enviar as info por post
-    <form method="post" action="../../server/verificar-usuario.php">
-        <input type="hidden" name="cargo", name="Usuarios"> <br>
-        Email: <input type="text" name="email"> <br>
-        Senha: <input type="text" name="senha"> <br>
-        <input type="submit" value="autenticar" name="Autenticar"> <br>
-    </form>
-    -->
+        <form method="post" action="../../server/verificar-usuario.php">
+            <input type="hidden" name="cargo", name="Usuarios"> <br>
+            Email: <input type="text" name="email"> <br>
+            Senha: <input type="text" name="senha"> <br>
+            <input type="submit" value="autenticar" name="Autenticar"> <br>
+        </form>
+        -->
     <?php
     }
 
@@ -70,9 +69,6 @@
         echo '<p class="erro">Usuário não encontrado!</p>';
     }
     ?>
-
- 
-
 
 </body>
 

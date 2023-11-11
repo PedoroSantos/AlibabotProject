@@ -1,6 +1,7 @@
 <?php
-include ("../../server/conexao.php");
-include ("../../server/banco-dados.php");
+include ("../../../server/check-admin.php");
+include ("../../../server/conexao.php");
+include ("../../../server/banco-dados.php");
 ?>
 
 <html>
