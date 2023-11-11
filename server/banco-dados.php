@@ -59,5 +59,7 @@ function verificaremail($conexao, $email){
 function buscarnome($conexao,$email){
 	$sql = "select nome from Usuarios where email='$email';";
 	$resultado = mysqli_query($conexao, $sql);
+	$row = mysqli_fetch_array($resultado,MYSQLI_NUM);
+	return $row[0];
 }
 ?>

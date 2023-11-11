@@ -1,5 +1,9 @@
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 * {
   scrollbar-width: auto;
   scrollbar-color: #52a7fd #0d0e11;

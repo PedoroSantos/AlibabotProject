@@ -1,1 +1,60 @@
-/*# sourceMappingURL=profile.css.map */
+@import url("main.scss");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap");
+body {
+  background-color: #13161a;
+}
+
+.btn-download {
+  border: none;
+  border-radius: 100px;
+  background: #41c6ff;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.btn-download:hover {
+  box-shadow: 0px 0px 20px -10px #41c6ff;
+  outline: 1px solid rgba(255, 255, 255, 0.436);
+}
+
+header {
+  background-color: #0d0f13;
+  border-bottom: 2px solid #5396f3;
+}
+
+.profile-msg {
+  background-color: #080a0e;
+  padding: 1em;
+  text-align: left;
+  letter-spacing: 0.6px;
+  font-size: 22px;
+}
+
+.emoji {
+  font-family: "Noto Color Emoji", sans-serif;
+}
+
+.news {
+  background-color: #080a0e;
+}
+.news h2 {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #52a7fd;
+}
+.news h2::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background: #52a7fd;
+  margin-left: 15px;
+}
+.news .gotodownload {
+  background-color: rgba(34, 43, 54, 0.4980392157);
+}
+.news .gotodownload p {
+  font-weight: 700;
+  font-size: 22px;
+}/*# sourceMappingURL=profile.css.map */

@@ -15,9 +15,7 @@ if(verificarAcesso($conexao, $cargo, $email, $senha, $nome)){
         "nome" => $nome,
         "senha" => $senha
     );
-    echo "<Script"
     setcookie("login_info", json_encode($login_info), 0, "/");
-
     header("Location:../public/pages/profile.php");
 } else {
     header("Location:../public/pages/login.php?erro=true");

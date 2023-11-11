@@ -1,9 +1,5 @@
 @charset "UTF-8";
 @import url("main.scss");
-body {
-  font-family: "Roboto", sans-serif;
-}
-
 .nav,
 .navbar {
   background-color: #272c33;
