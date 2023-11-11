@@ -58,8 +58,13 @@ function verificarAcesso($conexao, $email, $senha){
 		$resultado = mysqli_query($conexao, $sql);
 		$resultado = mysqli_fetch_assoc($resultado);
 	}
-	$resultado["cargo"] = $cargo;
-	return $resultado;
+	
+	if ($resultado == NULL){
+		return $resultado;
+	} else{
+		$resultado["cargo"] = $cargo;
+		return $resultado;
+	}
 }
 function verificaremail($conexao, $email){
 	$sql = "select count(email) from Usuarios where email='$email';";

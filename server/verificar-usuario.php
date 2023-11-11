@@ -6,7 +6,7 @@ $email = $_POST["email"];
 $senha = $_POST["senha"];
 
 setcookie("login_info", "", time() - 3600); 
-if(verificarAcesso($conexao, $email, $senha)){
+if(verificarAcesso($conexao, $email, $senha)!=NULL){
     $resultado = verificarAcesso($conexao, $email, $senha);
     $login_info = array(
         "cargo" => $resultado["cargo"],

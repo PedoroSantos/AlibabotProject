@@ -50,20 +50,6 @@
     </section>
 
     <?php
-    //var_dump($_COOKIE["login_info"]);
-    if (isset($_COOKIE["email"]) || isset($_COOKIE["email"])) {
-    ?>
-
-        <!-- formulario pra enviar as info por post
-        <form method="post" action="../../server/verificar-usuario.php">
-            <input type="hidden" name="cargo", name="Usuarios"> <br>
-            Email: <input type="text" name="email"> <br>
-            Senha: <input type="text" name="senha"> <br>
-            <input type="submit" value="autenticar" name="Autenticar"> <br>
-        </form>
-        -->
-    <?php
-    }
 
     if (isset($_GET["erro"])) {
         echo '<p class="erro">Usuário não encontrado!</p>';
