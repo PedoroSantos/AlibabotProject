@@ -126,7 +126,7 @@
     <h2 class="sec-header text-light  m-0 mx-5 mb-5" data-aos="fade-right" data-aos-duration="900">COMO <span class="mx-3">USAR?</span></h2>
     <br>
     <div class="video container-fluid d-flex justify-content-center align-items-center">
-      <iframe class=" m-auto" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+      <iframe class=" m-auto" src="https://www.youtube.com/embed/XV3ufKhHiFU">
       </iframe>
     </div>
 
