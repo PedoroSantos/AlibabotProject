@@ -22,6 +22,14 @@ body {
     opacity: .8;
   }
 }
+.link{
+    width: 5%;
+    transition: .6s;
+    opacity: .4;
+    &:hover{
+      opacity: 1;
+    }
+  }
 header {
   background-color: #0d0f13;
   border-bottom: 2px solid #5396f3;
@@ -36,7 +44,7 @@ header {
 .emoji {
   font-family: "Noto Color Emoji", sans-serif;
 }
-.news {
+.download-article {
   background-color: #080a0e;
   & h2 {
     position: relative;
@@ -53,7 +61,7 @@ header {
       margin-left: 15px;
     }
   }
-  & .gotodownload{
+  & .download-links{
     background-color: #222b367f;
     & p{
         font-weight: 700;

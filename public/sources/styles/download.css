@@ -25,6 +25,15 @@ body {
   opacity: 0.8;
 }
 
+.link {
+  width: 5%;
+  transition: 0.6s;
+  opacity: 0.4;
+}
+.link:hover {
+  opacity: 1;
+}
+
 header {
   background-color: #0d0f13;
   border-bottom: 2px solid #5396f3;
@@ -42,10 +51,10 @@ header {
   font-family: "Noto Color Emoji", sans-serif;
 }
 
-.news {
+.download-article {
   background-color: #080a0e;
 }
-.news h2 {
+.download-article h2 {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -53,17 +62,17 @@ header {
   align-items: center;
   color: #52a7fd;
 }
-.news h2::after {
+.download-article h2::after {
   content: "";
   flex-grow: 1;
   height: 2px;
   background: #52a7fd;
   margin-left: 15px;
 }
-.news .gotodownload {
+.download-article .download-links {
   background-color: rgba(34, 43, 54, 0.4980392157);
 }
-.news .gotodownload p {
+.download-article .download-links p {
   font-weight: 700;
   font-size: 22px;
-}/*# sourceMappingURL=profile.css.map */
+}/*# sourceMappingURL=download.css.map */

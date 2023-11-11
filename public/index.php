@@ -23,6 +23,7 @@
   <script src="https://kit.fontawesome.com/23139fef71.js" crossorigin="anonymous"></script>
   <!--Estilos-->
   <link rel="stylesheet" href="./sources/styles/index.css">
+  <link rel="shortcut icon" href='./sources/img/alibabot_logo.svg' type="image/x-icon">
 
 </head>
 
@@ -46,7 +47,13 @@
               ?>>Entrar</a>
             </li>
             <li class="nav-item download">
-              <a class="nav-link fw-bolder" href="#">Download</a>
+              <a class="nav-link fw-bolder" href=<?php
+              if (isset($_COOKIE['login_info'])){
+                echo "./pages/download.php";
+              } else {
+                echo "./pages/login.php?download=true";
+              }
+              ?>>Download</a>
             </li>
           </ul>
         </div>
@@ -59,7 +66,13 @@
         <h1 class="fw-bolder">Alibabot</h1>
         <p class="fw-medium fs-5">O seu gênio da informática. Com ele, você pode acessar e aproveitar o seu computador com facilidade e segurança.
           Experimente já!</p>
-        <button class="btn-download rounded-5 p-1 px-4 py-2 fs-5">Baixe Agora</button>
+        <button class="btn-download rounded-5 p-1 px-4 py-2 fs-5" onClick="<?php
+              if (isset($_COOKIE['login_info'])){
+                echo "window.location.href = './pages/download.php'";
+              } else {
+                echo "window.location.href = './pages/login.php'";
+              }
+              ?>">Baixe Agora</button>
       </div>
       <div class="h-image container-fluid">
         <img src="./sources/img/alibabot_robot.svg" alt="">

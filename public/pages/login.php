@@ -22,7 +22,7 @@
     <script src="https://kit.fontawesome.com/23139fef71.js" crossorigin="anonymous"></script>
     <!--Estilos-->
     <link rel="stylesheet" href="../sources/styles/auth.css">
-
+    <link rel="shortcut icon" href='../sources/img/alibabot_logo.svg' type="image/x-icon">
 </head>
 
 <body>
