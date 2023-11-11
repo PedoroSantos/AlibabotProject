@@ -50,7 +50,7 @@ if (!isset($_COOKIE['login_info'])) {
             <article class="download-article mt-2 p-3 rounded-5 shadow">
                 <h2 class="fw-semibold px-3 ">Download</h2>
                 <p class="fs-5 px-3 mt-2 ">
-                    Você quer aprender de forma eficiente e divertida? Então baixe o Estudar, o aplicativo de IA que te ajuda a estudar qualquer matéria e nível de ensino. Com o Estudar, você pode interagir com um chatbot inteligente, acessar conteúdos de qualidade, personalizar o seu plano de estudos e acompanhar o seu progresso. O Estudar é gratuito e fácil de usar. Não perca tempo e baixe agora mesmo! <span class="emoji">😊</span>
+                    Você quer aprender de forma eficiente e divertida? Então baixe o Alibabot, o aplicativo de IA que te ajuda a estudar qualquer matéria e nível de ensino. Com o Alibabot, você pode interagir com um chatbot inteligente, acessar conteúdos de qualidade, personalizar o seu plano de estudos e acompanhar o seu progresso. O Alibabot é gratuito e fácil de usar. Não perca tempo e baixe agora mesmo! <span class="emoji">😊</span>
                 <div class="download-links mt-5 p-3  w-100 rounded-5 ">
                     <p class=" mx-1 ">Versão mais recente.</p>
                     <include>
