@@ -7,10 +7,10 @@ include ("../../../server/banco-dados.php");
 <html>
 	<head>
 	<meta charset="UTF-8">
-	<title>Lista de Funcionários</title>
+	<title>Lista de Usuários</title>
 	</head>
 	<body>
-		<h1>Funcionários Cadastrados</h1>
+		<h1>Usuários Cadastrados</h1>
 		<h2>Menus</h2>
 		<a href="cadastro-usuarios.php">Novo cadastro</a>
 		<table>
