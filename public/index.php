@@ -22,8 +22,8 @@
   <!--Lib de icons-->
   <script src="https://kit.fontawesome.com/23139fef71.js" crossorigin="anonymous"></script>
   <!--Estilos-->
-  <link rel="stylesheet" href="../public/sources/styles/index.css">
-  <link rel="shortcut icon" href='../public/sources/img/alibabot_logo.svg' type="image/x-icon">
+  <link rel="stylesheet" href="./sources/styles/index.css">
+  <link rel="shortcut icon" href='./sources/img/alibabot_logo.svg' type="image/x-icon">
 
 </head>
 
@@ -31,7 +31,7 @@
   <header>
     <nav class="navbar navbar-expand-lg position-fixed w-100 text-light">
       <div class="container-fluid text-light ">
-        <a class="navbar-brand fw-bolder text-light d-flex align-items-center justify-content-center" href="#"><img src="../public/sources/img/alibabot_logo.svg" alt="logo" width="38px" class="mx-2">Alibabot</a>
+        <a class="navbar-brand fw-bolder text-light d-flex align-items-center justify-content-center" href="#"><img src="./sources/img/alibabot_logo.svg" alt="logo" width="38px" class="mx-2">Alibabot</a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,18 +40,18 @@
             <li class="nav-item">
               <a class="nav-link text-light fw-lighter enter-btn" aria-current="page" href=<?php
               if (isset($_COOKIE['login_info'])){
-                echo "../public/pages/profile.php";
+                echo "./pages/profile.php";
               } else {
-                echo "../public/pages/login.php?download=true";
+                echo "./pages/login.php?download=true";
               }
               ?>>Entrar</a>
             </li>
             <li class="nav-item download">
               <a class="nav-link fw-bolder" href=<?php
               if (isset($_COOKIE['login_info'])){
-                echo "../public/pages/download.php";
+                echo "./pages/download.php";
               } else {
-                echo "../public/pages/login.php?download=true";
+                echo "./pages/login.php?download=true";
               }
               ?>>Download</a>
             </li>
@@ -68,14 +68,14 @@
           Experimente já!</p>
         <button class="btn-download rounded-5 p-1 px-4 py-2 fs-5" onClick="<?php
               if (isset($_COOKIE['login_info'])){
-                echo "window.location.href = '../public/pages/download.php'";
+                echo "window.location.href = './pages/download.php'";
               } else {
-                echo "window.location.href = '../public/pages/login.php'";
+                echo "window.location.href = './pages/login.php'";
               }
               ?>">Baixe Agora</button>
       </div>
       <div class="h-image container-fluid">
-        <img src="../public/sources/img/alibabot_robot.svg" alt="">
+        <img src="./sources/img/alibabot_robot.svg" alt="">
       </div>
     </div>
 
