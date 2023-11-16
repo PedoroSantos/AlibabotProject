@@ -39,7 +39,7 @@
                                                                     echo $obj->nome;
                                                                     ?>! <span class="emoji">👋</span></h1>
 
-                <a href="login.php" class="hd-link mx-2 text-light text-decoration-none " onClick='document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });'><i class="fa-solid fa-right-from-bracket"></i> Sair </a>
+                <a href="../" class="hd-link mx-2 text-light text-decoration-none " onClick='document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });'><i class="fa-solid fa-right-from-bracket"></i> Sair </a>
             </div>
 
         </header>

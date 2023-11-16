@@ -41,7 +41,7 @@ if (!isset($_COOKIE['login_info'])) {
 
                 <a href="profile.php" class="hd-link mx-2 text-light text-decoration-none">
                     <i class="fas fa-user"></i> Perfil </a>
-                <a href="login.php" class="hd-link mx-2 text-light text-decoration-none " onClick='document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });'><i class="fa-solid fa-right-from-bracket"></i> Sair </a>
+                <a href="../" class="hd-link mx-2 text-light text-decoration-none " onClick='document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });'><i class="fa-solid fa-right-from-bracket"></i> Sair </a>
 
             </div>
 

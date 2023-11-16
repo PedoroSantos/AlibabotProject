@@ -38,13 +38,17 @@
         <div class="collapse navbar-collapse  " id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-light fw-lighter enter-btn" aria-current="page" href=<?php
-              if (isset($_COOKIE['login_info'])){
-                echo "./pages/profile.php";
-              } else {
-                echo "./pages/login.php?download=true";
-              }
-              ?>>Entrar</a>
+              <?php
+              if (isset($_COOKIE["login_info"])) {
+                ?>
+                <a href="pages/profile.php" class="hd-link mx-2 text-light text-decoration-none" style="padding:12px;">
+                    <i class="fas fa-user nav-link text-light"></i> Meu Perfil </a>
+              <?php
+              } else { ?>
+              <a class="nav-link text-light fw-lighter enter-btn" aria-current="page" href="./pages/login.php?download=true">Entrar</a>
+              <?php
+              } ?>
+
             </li>
             <li class="nav-item download">
               <a class="nav-link fw-bolder" href=<?php
