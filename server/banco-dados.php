@@ -2,12 +2,12 @@
 
 function selectCargo($cargo) {
 	if ($cargo == "Usuarios"){
-		$id_cargo = "idUsuarios";
+		$idCargo = "idUsuario";
 	}
 	else if ($cargo == "Funcionarios") {
-		$id_cargo = "idFuncionarios";
+		$idCargo = "idFuncionario";
 	};
-	return $id_cargo;
+	return $idCargo;
 };
 function inserir($conexao, $cargo, $nome, $email, $idade){
 	$sql="insert into $cargo(nome, email, idade) values('$nome','$email',$idade);";
@@ -15,14 +15,14 @@ function inserir($conexao, $cargo, $nome, $email, $idade){
 };
 
 function alterar($conexao, $cargo, $idUsuario, $nome, $email, $idade){
-	$id_cargo = selectCargo($cargo);
-	$sql = "update $cargo set nome='$nome',email='$email',idade=$idade where $id_cargo=$idUsuario";
+	$idCargo = selectCargo($cargo);
+	$sql = "update $cargo set nome='$nome',email='$email',idade=$idade where $idCargo=$idUsuario";
 	return mysqli_query($conexao,$sql);
 };
 
-function excluir($conexao, $cargo, $id){
-	$id_cargo = selectCargo($cargo);
-	$sql = "delete from $cargo where $id_cargo = $id";
+function excluirUser($conexao, $cargo, $id){
+	$idCargo = selectCargo($cargo);
+	$sql = "delete from $cargo where $idCargo = $id";
 	return mysqli_query($conexao,$sql);
 };
 
@@ -39,8 +39,8 @@ function listaBanco($conexao, $cargo){
 
 
 function buscarIndividual($conexao, $cargo, $idUsuario){
-	$id_cargo = selectCargo($cargo);
-	$sql = "select * from $cargo where $id_cargo = $idUsuario";
+	$idCargo = selectCargo($cargo);
+	$sql = "select * from $cargo where $idCargo = $idUsuario";
 	$resultado = mysqli_query($conexao,$sql);
 	return mysqli_fetch_assoc($resultado);
 };

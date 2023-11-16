@@ -1,6 +1,9 @@
 <?php 
-    include("../../../server/excluir-cliente-proc.php");
-    include ("../../../server/check-admin.php");
+    include("../../../server/excluir-proc.php");
+    if(array_key_exists('btnExcluir', $_GET)) {
+        echo "1";
+        excluir($conexao, $cargo, $id);
+    }
 ?>
 
 <html>
@@ -12,10 +15,9 @@
     <h1> Deseja escluir o seguinte funcionário ou cliente?? </h1>
     <h2> Nome: <?php echo $cliente["nome"] ?> </h2>
     <h2> Email: <?php echo $cliente["email"] ?> </h2>
-    
-    <!--cADICIONAR LISTA TABELA NO FORM ABAIXO QUANDO FOR TERMINADO. -->
-    <form method="post" action=LISTA TABELA">
-        <input type="hidden" name="idCliente" value="<?php echo $cliente["idClientes"] ?>"> <br>
+
+    <form method="get" action="excluir.php?<?php echo $idCargo, "=", $cliente[$idCargo] ?>">
+        <input type="hidden" name="<?php echo $idCargo ?>" value="<?php echo $cliente[$idCargo] ?>"> <br>
         <input type="submit" value="Excluir" name="btnExcluir"> <br>
     </body>
 
