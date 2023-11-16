@@ -42,7 +42,6 @@ if (!isset($_COOKIE['login_info'])) {
                 <a href="profile.php" class="hd-link mx-2 text-light text-decoration-none">
                     <i class="fas fa-user"></i> Perfil </a>
                 <a href="../" class="hd-link mx-2 text-light text-decoration-none " onClick='document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });'><i class="fa-solid fa-right-from-bracket"></i> Sair </a>
-
             </div>
 
         </header>
@@ -57,7 +56,6 @@ if (!isset($_COOKIE['login_info'])) {
                         <button class="btn-download p-2 px-4" onClick='download(<?php echo sizeof($versoes) - 1?>)'>Clique aqui para baixar</button>
                         <a class="mx-4 link text-light text-decoration-none" href="../pages/versões.php">Versões anteriores</a>
                 </div>
-
 
         </div>
     </section>

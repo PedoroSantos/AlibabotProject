@@ -1,10 +1,10 @@
 <?php
 
 function selectCargo($cargo) {
-	if ($cargo == "usuario"){
+	if ($cargo == "Usuarios"){
 		$id_cargo = "idUsuarios";
 	}
-	else if ($cargo == "funcionario") {
+	else if ($cargo == "Funcionarios") {
 		$id_cargo = "idFuncionarios";
 	};
 	return $id_cargo;
@@ -47,17 +47,14 @@ function buscarIndividual($conexao, $cargo, $idUsuario){
 
 function verificarAcesso($conexao, $email, $senha){
 
-	$sql = "select * from usuarios where email= '$email' and senha= '$senha';";
-	$cargo = "usuario";
-	$resultado = mysqli_query($conexao, $sql);
-	$resultado = mysqli_fetch_assoc($resultado);
-	
-	if ($resultado == NULL){
-		$sql = "select * from funcionarios where email= '$email' and senha= '$senha';";
-		$cargo = "funcionario";
+	$cargos = ["Funcionarios", "Usuarios"];
+
+	foreach($cargos as $cargo) {
+		$sql = "select * from $cargo where email= '$email' and senha= '$senha';";
 		$resultado = mysqli_query($conexao, $sql);
 		$resultado = mysqli_fetch_assoc($resultado);
-	}
+		if ($resultado != NULL) { break; };
+		}
 	
 	if ($resultado == NULL){
 		return $resultado;
